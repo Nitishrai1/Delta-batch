@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Javascript if</h2>
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+    <p id="Demo">Good evening!</p> -->
+    <h2>Javascript Alert</h2>
+    <button onclick="myfunction()">Try it</button>
+    <script>
+        // let a=5;
+        // switch (new Date().getDay()) {
+        //     case 1:
+        //         console.log("Monday");
+        //         break;
+        //     case 2:
+        //         console.log("Tuesday");
+        //         break;
+        //     case 2:
+        //         console.log("Wednesday");
+        //         break;
+        //     case 2:
+        //         console.log("Thursday");
+        //         break;
+        //     case 2:
+        //         console.log("Friday");
+        //         break;
+        //     case 2:
+        //         console.log("Saturday");
+        //         break;
+        //     case 2:
+        //         console.log("sunday");
+        //         break;
+        //     default:
+        //             console.log("Wrong Day");
+        //         break;
+
+        //     }
+        // var i=0;
+        // for(i=0;i<11;i++){
+        //     if(i==3) continue;
+        //     document.write("The number is "+i);
+        //     document.write("<br/>");
+            
+        // }
+        // const car=["BMW","VOLVO","AUDI","MERCEDIS","JAGUAR"]
+        // let i=0;
+        // let text=""
+        // while()
+        function myfunction(){
+            alert("I am an alert box!");
+        }var x=document.getElementById("myBtn");
+        x.addEventListener("mouseover",myfunction);
+        x.addEventListener("click",mysecondfunction);
+        x.addEventListener("mouseout",mythirdfunction);
+        function myfunction(){
+            document.getElementById("demo").innerHTML+="Moused over!<br>";
+        }
+        function mysecondfunction(){
+            document.getElementById("demo").innerHTML+="clicked!<br>";
+        }
+        function mythirdfunction(){
+            document.getElementById("demo").innerHTML+="Moused out!<br>";
+        }
+        const fruit=["Banana","orange","aplle","mango"];
+        const flen=fruit.length;
+        let text="<ul>";
+
+            for(let i=0;i<flen;i++){
+                text+="<li>"+fruit[i]+"</li>";
+            }
+            text+="</ul>"
+            document.getElementById("demo").innerHTML=text;
+            const mygirls=["cecilie","lone"];
+            const myboys=["Email","Tobias","Linus"];
+            const mychildren=mygirls.concat(myboys);
+            document.getElementById("demo").innerHTML=mychildren;
+
+        
+    </script>
+    <h2>Javascript addEventListener()</h2>
+    <p>Tihs example uses the addEventListener() method to add many  events on the same button</p>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+</body>
+</html>
