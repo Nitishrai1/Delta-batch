@@ -1,0 +1,42 @@
+<!-- zindex -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+            background-color: pink;
+        }
+        .box-one{
+            background-color: orange;
+            position: relative;
+            z-index: -8;
+            
+        }
+        .box-two{
+            background-color: blue;
+            position: relative;
+            bottom: 50px;
+            z-index: -2;
+            
+        }
+        .box-three{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Z-index</h1>
+    <div class="box-one">1</div>
+    <div class="box-two">2</div>
+    <div class="box-three">3</div>
+</body>
+</html>

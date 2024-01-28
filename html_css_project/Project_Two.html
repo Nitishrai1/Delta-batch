@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application (Web)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: rgba(129, 125, 125, 0.175); */
+        }
+        body{
+            background-color: rgb(212, 206, 206);
+        }
+        label{
+            font-size: 15px;
+            padding-left: 5px;
+        }
+        input,textarea,select{
+            padding-left: 5px;
+            margin: 5px;
+        }
+        
+        .main_container{
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .form{
+            height: 350px;
+            width:400px;
+            box-shadow: 4px 3px 2px rgba(1,1,1,0,2);
+            left: 500px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            margin-left: 250px;
+            
+            margin-top: 70px;
+            /* display: inline-block; */
+            margin-right: 350px;
+            background-color: white;
+        }
+        .formcontainer{
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+        }
+        button{
+            background-color: red;
+            border-radius: 3px;
+            color: white;
+            height: 30px;
+            width: 90px;
+            
+        }
+        .button_container{
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="form">
+            <form action="">
+                <h3>Job Application (Web)</h3> <br>
+                <div class="formcontainer">
+                <div class="firstname">
+                    <label for="First-name">First name</label>
+                    <br>
+                <input type="text" placeholder="Enter first name...">
+                </div>
+                <div class="lastname">
+                    <label for="last-name">last name</label>
+                    <br>
+                <input type="text" placeholder="Enter last name">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <br>
+                <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="job_role">
+                    <label for="Job Role">Job Role</label>
+                    <br>
+                <select name="job-role" id="">
+                    <option value="">Select job role</option>
+                    <option value="SDE2">SDE2 eng</option>
+                    <option value="devops">Devops eng</option>
+                    <option value="full stack">FULL STACK eng</option>
+                </select>
+                </div>
+                <div class="address">
+                    <label for="addres">Enter Address</label>
+                    <br>
+                <textarea name="address" id="" cols="50" rows="2" placeholder=" "></textarea>
+                </div>
+                <div class="city">
+                    <label for="city">City</label>
+                    <br>
+                <input type="text" placeholder="Enter City">
+                </div>
+                <div class="pincode">
+                    <label for="pincode">Pincode</label>
+                    <br>
+                <input type="number" placeholder="Enter Pincode">
+                </div>
+                <div class="Date">
+                    <label for="start-date">Start Date</label>
+                    <br>
+                <input value="2024-12-10" type="date" id="date" name="date"   >
+                </div>
+                <div class="cv">
+                    <label for="cv">Upload Your CV</label>
+                    <br>
+                <input type="file" name="cv" id="cv">
+                </div>
+            </div>
+            <div class="button_container">
+                <button type="submit">Apply Now </button>
+            </div>
+            
+                
+
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>

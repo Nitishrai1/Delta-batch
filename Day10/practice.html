@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet adoption</title>
+    <style>
+        a{
+            color: orange;
+            font-family: italic;
+            
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            
+
+        }
+        @media(max-width:375px){
+            .container{
+                flex-wrap: wrap;
+                gap: 10px;
+
+            }
+        }
+        .element{
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 360px;
+            width: 300px;
+            
+        }
+        .element img{
+            width: 220px;
+            margin: auto;
+            /* text-align: center; */
+            display: block;
+            margin-top: 5px;
+            border-radius: 8px;
+        }
+        .element{
+            align-items: center;
+        }
+        footer{
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <a href="adoptme.com">adoptme.com</a>
+    <h3>Adopte a <span style="color: rgb(206, 206, 83);">Pet</span> Today</h3><br><br>
+
+    <div class="container">
+        <div class="element">
+            <img src="pexels-dids-1302290.jpg" alt="not-visible">
+            
+                <h4>Meet jerry</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi numquam minima similique exercitationem incidunt alias? Obcaecati tempora iure amet, dolorum quis ullam maiores sequi voluptate, minus fugiat vero illum dolore
+
+                </p>
+                
+        </div>
+            
+        
+        <div class="element">
+            <img src="pexels-pixabay-57416.jpg" alt="not visible">
+            
+            <h4>Meet Tom</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sapiente eum nihil aliquam voluptatibus? Aliquam suscipit incidunt dicta nobis non dolorem quis, saepe expedita accusantium nam. Eaque eligendi voluptatem id!</p>
+         
+        </div>
+    </div>
+    <footer>
+        <h3>This is the end of the web page</h3>
+    </footer>
+    
+</body>
+</html>

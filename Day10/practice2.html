@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-practice</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(12,1fr);
+            grid-gap: 10px;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container div{
+            background-color: pink;
+            font-size: 1.5rem;
+        }
+        .header{
+            grid-column: 1/span 12;
+            /* grid-row: 1/span 1; */
+
+        }
+        .navigation{
+            grid-column: 4/span 6;
+            /* grid-row: 2/span 3; */
+
+
+        }
+        .sidebar{
+            grid-column: 1/span 3 ;
+            grid-row: 2/span 10;
+
+
+        }
+        .main{
+            grid-column: 4/span 6;
+            grid-row: 3/span 9;
+            
+        }
+        .ads{
+            grid-column: 10/span 3;
+            grid-row: 2/span 10;
+
+        }
+        .footer{
+            grid-column: 1/span 12;
+            /* grid-row: 11/span 1; */
+           
+
+        }
+        @media(max-width:720px){
+            .header{
+                grid-column: 1/span 12;
+            }
+            .navigation{
+                grid-column: 1/span 12;
+                grid-row: 2;
+                
+            }
+            .sidebar{
+                grid-column: 1/span 3;
+                grid-row: 3/span 9;
+            }
+            .main{
+                grid-column: 4/span 9;
+            grid-row: 3/span 9;
+            }
+            .ads{
+                grid-column: 1/span 3;
+                grid-row:12;
+            }
+            .footer{
+                grid-column: 4/span 9;
+                grid-row: 12;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header(1row,12column)</div>
+        <div class="navigation">navigation(1row,6column)</div>
+        <div class="sidebar">sidebar(10row,3column)</div>
+        <div class="main">main(9row,6column)</div>
+        <div class="ads">ads(10row,3column)</div>
+        <div class="footer">footer(1row,12column)</div>
+    </div>
+    
+</body>
+</html>
