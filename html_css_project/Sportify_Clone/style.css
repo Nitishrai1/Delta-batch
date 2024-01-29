@@ -18,20 +18,21 @@ body{
 
 }
 .side-bar{
-    width: 340px;
-    border-radius: 1rem;  
+    width:320px;
+    border-radius: 0.51rem;  
     /* 1 rem=16px */
     background-color:black;
+    margin-right: 0.5rem;
 }
 .main-content{
     flex: 1;
-    border-radius: 1rem;
+    border-radius: 0.51rem;
     overflow: auto;
     background-color: #121212;
 
 }
 .music-player{
-    background-color: yellow;
+    background-color: rgb(30, 30, 29);
     position: fixed;
     bottom: 0px;
     width: 100%;
@@ -43,7 +44,7 @@ a{
 }
 .nav{
     background-color: #121212;
-    border-radius: 1rem;
+    border-radius: 0.51rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +71,7 @@ a{
 }
 .library{
     background-color: #121212;
-    border-radius: 1rem;
+    border-radius: 0.51rem;
     height: 100%;
     margin-top: 0.5rem;
     line-height: 0.75rem;
@@ -85,6 +86,9 @@ a{
 .library-option img{
     height:1rem ;
     width: 1rem;
+}
+.library-option img:hover{
+    opacity: 1;
 }
 .library-option{
     opacity: 0.7;
@@ -106,6 +110,7 @@ a{
 .library-option a{
     padding-left: 8px;
 }
+
 .boxes{
     display: flex;
     justify-content: space-between;
@@ -133,6 +138,7 @@ a{
 .box-content p{
     padding-bottom: 8px;
     font-size: 12px;
+    opacity: 0.7;
 
 }
 .box-content button{
@@ -146,4 +152,97 @@ a{
 }
 button:hover{
     transform: scale(1.1);
+}
+.main-content{
+    border-radius: 0.51rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.main-header{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    background-color: #212121;
+    
+    align-items: center;
+    height:45px;
+    
+}
+.arrow-f-b img{
+    opacity: 0.7;
+}
+.arrow-f-b img:hover{
+    opacity: 1;
+    font-size: 0.7rem;
+}
+.credential{
+    display: flex;
+    color: white;
+    align-items: center;
+    
+    
+}
+
+.credential>button{
+    height: 35px;
+    margin-right: 5px;
+    border-radius: 30px;
+    width: 75px;
+    background-color: white;
+    
+
+}
+.credential a{
+    margin: 5px 5px;
+    font-size: 0.6rem;
+    opacity: 0.7;
+
+}
+.sign-up{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.credential a:hover{
+    font-size: 0.71rem;
+    opacity: 1;
+    color: white;
+}
+.credential p{
+    margin: 5px 10px;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
+}
+.cards{
+    margin-top: 10px;
+}
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.51rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+}
+.card-container{
+    display: flex;
+    padding-top:10px ;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.51rem;
+
+}
+.card-title{
+    font-weight:600 ;
+    padding: 5px 0px;
+
+}
+.card-info{
+    font-size: 0.5rem;
+    opacity: 0.5;
+}
+.main-content h2{
+    margin: 10px 0px;
+
 }
