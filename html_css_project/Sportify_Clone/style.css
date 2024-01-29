@@ -137,6 +137,13 @@ a{
 }
 .box-content button{
     bottom: 4px;
-    border-radius: 8px;
-    padding: 2px 3px;
+    border-radius: 15px;
+    padding: 4px 4px;
+    font-size: 8px;
+    width: 80px;
+    height: 1.4rem;
+
+}
+button:hover{
+    transform: scale(1.1);
 }
