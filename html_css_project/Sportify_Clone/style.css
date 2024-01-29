@@ -14,6 +14,7 @@ body{
 .main{
     display: flex;
     height: 100vh;
+    padding: 0.5rem;
 
 }
 .side-bar{
@@ -51,7 +52,7 @@ a{
 }
 .nav-option{
     opacity: 0.7;
-    line-height: 2.5rem;
+    line-height: 0.75rem;
     padding: 8px 0.75rem;
 
 }
@@ -59,11 +60,83 @@ a{
     opacity: 1;
 }
 .nav-option i{
-    font-size: 1.25rem;
+    font-size: 1rem;
     
 }
 .nav-option a{
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin-left: 1rem;
 
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    line-height: 0.75rem;
+    padding: 8px 0.75rem;
+
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.library-option img{
+    height:1rem ;
+    width: 1rem;
+}
+.library-option{
+    opacity: 0.7;
+    line-height: 0.75rem;
+    padding: 8px 0.75rem;
+}
+.arrows{
+    font-size: 1.25rem;
+    opacity: 0.7;
+    margin-right: 0.5rem;
+}
+.arrows i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.arrows i:hover{
+    opacity: 1;
+}
+.library-option a{
+    padding-left: 8px;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+.box1{
+    line-height: 0.75rem;
+    padding: 10px 0.5rem;
+    margin-top: 10px;
+    
+    background-color: #232323;
+    border-radius: 0.25rem;
+    height: 7rem;
+    width: 18rem;
+
+    
+}
+.box-content{
+    line-height: 1.25rem;
+
+}
+
+.box-content p{
+    padding-bottom: 8px;
+    font-size: 12px;
+
+}
+.box-content button{
+    bottom: 4px;
+    border-radius: 8px;
+    padding: 2px 3px;
 }
