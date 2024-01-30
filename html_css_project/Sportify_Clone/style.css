@@ -32,11 +32,12 @@ body{
 
 }
 .music-player{
-    background-color: rgb(30, 30, 29);
+    background-color: #000;
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 72px;
+    height: 70px;
+    display: flex;
 }
 a{
     text-decoration: none;
@@ -161,11 +162,15 @@ button:hover{
 .main-header{
     display: flex;
     /* flex-wrap: wrap; */
+    position: fixed;
+    z-index: 10;
     justify-content: space-between;
     background-color: #212121;
     
     align-items: center;
     height:45px;
+    width: 63%;
+    border-radius: 0.51rem;
     
 }
 .arrow-f-b img{
@@ -245,4 +250,110 @@ button:hover{
 .main-content h2{
     margin: 10px 0px;
 
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    bottom: 150px;
+    border-top: 1px solid white;
+    opacity: 0.3;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+}
+.singer{
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.singer img{
+    height: 50px;
+    width: 50px;
+}
+.singer h3{
+    font-size: 10px;
+
+}
+.singer p{
+    font-size: 5px;
+}
+.singer-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.71rem;
+    
+}
+.like{
+    
+}
+.text{
+    margin: 0.5rem;
+}
+.like i{
+    padding: 5px;
+    opacity: 0.4;
+    height: 2px;
+    
+}
+.like i:hover{
+    opacity: 1;
+}
+.controls{
+    margin: 0px 40px;
+    display: flex;
+}
+.control-icons{
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+.control-icons i{
+    margin: 0px 4px;
+    opacity: 0.4;
+    margin: 0px 5px;
+    
+}
+.control-icons i:hover{
+    opacity: 1;
+}
+.track-record{
+    margin-top: 20px;
+    
+    align-items: center;
+    
+}
+.tract-control img{
+    height: 15px;
+    margin: 0px 10px;
+    opacity: 0.6;
+}
+.play{
+    height: 20px;
+}
+.play-back-bar{
+    margin-top: 5px;
+}
+.current .end{
+    opacity: 0.5;
+    height: 4px;
+}
+.tract-control img:hover{
+    opacity: 1;
+}
+.progress-bar{
+    background-color: #fff;
 }
