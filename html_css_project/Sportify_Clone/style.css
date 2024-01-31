@@ -294,9 +294,7 @@ button:hover{
     line-height: 0.71rem;
     
 }
-.like{
-    
-}
+
 .text{
     margin: 0.5rem;
 }
@@ -331,26 +329,51 @@ button:hover{
     opacity: 1;
 }
 .track-record{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
     
     align-items: center;
     
 }
 .tract-control img{
-    height: 15px;
+    height: 10px;
     margin: 0px 10px;
     opacity: 0.6;
+    align-items: center;
+    justify-content: center;
 }
 .play{
     height: 20px;
 }
-.play-back-bar{
-    margin-top: 5px;
+.content{
+    margin-left: 55px;
 }
-.current .end{
-    opacity: 0.5;
-    height: 4px;
-}
+
+
 .tract-control img:hover{
     opacity: 1;
+}
+.progress-bar{
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    
+    width: 200px;
+    
+}
+.progress-bar::-webkit-slider-runnable-track{
+    border-radius: 100px;
+    height: 0.15rem;
+    background-color: #ddd;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 0.75rem;
+    width:0.75rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.progress-bar::-webkit-slider-runnable-track:hover{
+    background-color: #1bd760;
 }
