@@ -31,3 +31,18 @@ btn.innerHTML="click me";
 document.querySelector("body").append(input);
 document.querySelector("body").append(btn);
 
+
+btn.setAttribute("id","button");
+input.setAttribute("placeholder","Username");
+
+let b=document.querySelector('#button');
+b.classList.add("btnstyle");
+
+// let h1=document.createElement("h4");
+// h1.innerHTML="<ul> DOM Practice </u>";
+// document.querySelector("body").append(h1);
+
+// Q5
+let ptag=document.createElement("p");
+ptag.innerHTML="Apna College <b>Delta</b> Practice";
+document.querySelector("body").append(ptag);
