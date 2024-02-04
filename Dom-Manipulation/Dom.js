@@ -23,3 +23,11 @@ div.append(para3);
 div.classList.add("box")
 
 document.querySelector("body").append(div);
+let input=document.createElement("input");
+input.innerText="enter the name";
+let btn=document.createElement("button");
+btn.innerHTML="click me";
+
+document.querySelector("body").append(input);
+document.querySelector("body").append(btn);
+
