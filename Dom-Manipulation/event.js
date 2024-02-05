@@ -44,15 +44,40 @@ let h2=document.querySelector("h3");
 
 // Or
 
-function changecolor(){
-    console.dir(this.innerText);
-    this.style.backgroundColor="blue";
+// function changecolor(){
+//     console.dir(this.innerText);
+//     this.style.backgroundColor="blue";
 
-}
+// }
 
-h1.addEventListener("click",changecolor);
-h2.addEventListener("click",changecolor);
-btn3.addEventListener("click",changecolor);
+// h1.addEventListener("click",changecolor);
+// h2.addEventListener("click",changecolor);
+// btn3.addEventListener("click",changecolor);
+
+// Keyboard events: when ever we tupe a key it trigger a event
+
+// let inp=document.querySelector("input");
+// inp.addEventListener("keydown",function(){
+//     console.log("Key was pressed");
+// })
+
+// let rel=document.querySelector("input");
+// inp.addEventListener("keyup",function(){
+//     console.log("Key was released");
+// })
+
+// keyboard events
+// code : tells the code of the character
+// key display wihch is displayed on screen
+
+let rel=document.querySelector("input");
+rel.addEventListener("keydown",function(event){
+    console.log("key = ",event.key);
+    console.log("code = ",event.code);
+    
+});
+
+ 
 
 
 
