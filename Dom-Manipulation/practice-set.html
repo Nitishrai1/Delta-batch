@@ -10,6 +10,10 @@
     <p>Hello my name is nitish rai</p>
 
     <input type="text" id="text" placeholder="name">
+    <button>Click Me!</button>
+    <br><br>
+    <input type="text" placeholder="enter your name" id="user">
+    <h2>Hello i am h2</h2>
 
     <script>
         let p=document.querySelector("p");
@@ -20,6 +24,31 @@
         let inp=document.querySelector("#text");
         inp.addEventListener("keypress",function(){
             console.log("key was pressed")
+        })
+
+        // create a button on the page using javascroipt add an event listener to the button that cahnges the buttons color to green when it is clicked
+
+        let btn=document.querySelector("button");
+
+        btn.addEventListener("click",()=>{
+            btn.style.backgroundColor="green";
+            
+        })
+
+        // Q3: create an input element on the page with a placeholder "enter your name" and an h2 heading on the page inside HTML. the purpose of this input element is to enter a user's name so it shuld only input letters from a-z A-Z and space (all other characters should not be detected). whenever the user inputs their name, thei input should be dynamically visible inside the heading [Please not that no other character apart from the allowed character should be visible in the heading]
+
+        let inp2=document.querySelector("#user");
+        let h2=document.querySelector("h2");
+
+        function isAlphabetOrSpace(char){
+            return typeof char === 'string' && /[a-zA-Z\s]/.test(char);  //this function check if the character is between a-z or A-Z or a space
+
+        }
+
+        inp2.addEventListener("input",()=>{
+            const filtervalue=inp2.value.replace(/[^a-zA-Z\s]/g, '');
+            h2.innerText=filtervalue;
+            
         })
     </script>
     
