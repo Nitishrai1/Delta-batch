@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action">
+        <input type="text" placeholder="username" id="user">
+        <input type="text" placeholder="passward" id="passward">
+        <!-- <input type="text" placeholder=""> -->
+
+        <button>Register</button>
+    </form>
+
+    <script>
+         // change event the change event occurs the value of an element has been changed (only works on <input> ,<textarea> and <select> elements)
+
+        let form =document.querySelector("form");
+
+
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+        });
+
+
+        let user=document.querySelector("#user");
+
+        user.addEventListener("change",function(){
+            
+            console.log("input changed");
+            console.log("final value = ",this.value);
+        })
+
+        // input event fires when the value of an <input>, <select>, or <textarea> element has been changed
+
+        user.addEventListener("input",function(){
+
+        console.log("input event");
+        console.log("final value = ",this.value);
+        });   
+
+        
+        // let form=document.querySelector("form");
+        // form.addEventListener("submit",function(event){
+        //     // event.preventDefault();   //this method is used to prevent the action when clicked on the submit button
+        //     alert("form submitted");
+        // })
+
+        // Extracting Form Data
+
+        // let form=document.querySelector("form");
+        // form.addEventListener("submit",function (event){
+        //     event.preventDefault();
+        //     // let user=document.querySelector("#user");
+        //     // let pass=document.querySelector("#passward");
+
+        //     // let username=this.elements[0];    //form.elements[0]  both are same
+        //     // let passward=this.elements[1];
+
+        //     // console.log(user.value);
+        //     // console.log(pass.value);
+        //     // alert(`Hi ${user.value}, your passward is ${pass.value}`);
+
+
+        //    
+
+        // });
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>
