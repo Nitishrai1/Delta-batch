@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: pink;
+            height: 200px;
+            width: 400px;
+        }
+        ul{
+            background-color: blue;
+        }
+        li{
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+    <script>
+
+        // Event bubbling is the defect occure when we try to access the element of a container and another eventlistner awake in this case on clicking the ul tag div eventlisterner also callback
+
+
+        // To stop the event bubbling we can use stopPropagation() function
+        let div=document.querySelector("div");
+        let ul=document.querySelector("ul");
+        let lst=document.querySelectorAll("li");
+
+
+        div.addEventListener("click",()=>{
+            event.stopPropagation();
+
+            console.log("div was clicked");
+        })
+
+        ul.addEventListener("click",(event)=>{
+            event.stopPropagation();
+            console.log("ul was clicked");
+        })
+
+        for(li of lst){
+            li.addEventListener("click",(event)=>{
+                event.stopPropagation();
+
+                console.log("li was clicked")
+            })
+        }
+    </script>
+    
+</body>
+</html>

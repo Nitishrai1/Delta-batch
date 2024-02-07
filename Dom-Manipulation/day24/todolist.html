@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- In this activity the new added task is added to the list below -->
+    <h1>Todo App</h1>   
+    <input type="text" placeholder="enter your task">
+    <button>Click Me</button>
+    <ul>
+        <li>Eat <button class="delete">Dlete</button></li>
+        <li>Sleep <button class="delete">Dlete2</button></li>
+        <li>code <button class="delete">Dlete3</button></li>
+    </ul>
+    <script>
+        let inp=document.querySelector("input");
+        let btn=document.querySelector("button");
+        let ul=document.querySelector("ul");
+
+        btn.addEventListener("click",()=>{
+            let item=document.createElement("li");
+            let delbtn=document.createElement("button");
+            delbtn.innerText="delete";
+            delbtn.classList.add("delete");
+            item.innerText=inp.value;
+            ul.appendChild(item);
+            item.appendChild(delbtn);
+            inp.value="";
+
+        })
+    //    let delbtns=document.querySelectorAll(".delete");
+    //    for(delbtn of delbtns){
+    //     delbtn.addEventListener("click",function (){
+    //         let par=this.parentElement;
+    //         par.remove();
+    //     });
+    //    }
+
+    //    Event Delegation: if we create a new elemtn but the eventlsitner do not work on the new element to avoid this setutaion we add the eventlistner to the parent element not to the child element
+
+    // applyin the event bubbling on ul
+    ul.addEventListener("click",function(event){
+        console.log(event.target.nodeName);  //this will show which item is clicked
+        if(event.target.nodeName=="BUTTON")
+        {
+            let listitem=event.target.parentElement;
+            listitem.remove();
+            console.log("Deleted");
+            
+        }
+        
+    }); 
+
+
+
+
+    </script>
+</body>
+</html>
