@@ -1,0 +1,108 @@
+<!-- Create a good form using html and css and then use javascript to print the input which we have given in the form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(55, 158, 206);
+        }
+        .main-container{
+            background-color: white;
+            height: 500px;
+            width: 400px;
+            margin: auto;
+            display: flex;
+            margin-top: 100px;
+            border-radius: 5px;
+        }
+        .form-box{
+            margin: 10px 20px;
+        }
+        .body-section{
+            margin: 20px 0px;
+            line-height: 3rem;
+        }
+        .body-section input{
+            border: none;
+            margin: 0px 8px;
+
+        }
+        .body-section hr{
+            width: 360px;
+        }
+        .form-footer{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .form-footer .btn{
+            width: 350px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 40px;
+            background-color:  rgb(55, 158, 206);
+        }
+        .body-section p{
+            margin: 0px 50px;
+        }
+        table{
+            border: 2px solid black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-box">
+            <h1>Registration</h1>
+            <div class="body-section">
+               <label for="username"><i class="fa-regular fa-user"></i></label> 
+               <input type="text" name="username" placeholder="Enter your name" id="username">
+               <hr>
+               <label for="username"><i class="fa-regular fa-envelope"></i></label> 
+               <input type="email" name="email" placeholder="Enter your email">
+               <hr>
+               <label for="username"><i class="fa-solid fa-lock"></i></label> 
+               <input type="password" name="password" placeholder="Enter your password"><i class="fa-regular fa-eye" id="eye-logo"></i>
+               <hr>
+               <label for="username"><i class="fa-solid fa-lock"></i></label> 
+               <input type="password" name="confirm-pass" placeholder="Confirm your passward">
+               <hr>
+               <input type="checkbox" id="check"> <label for="check">I accept all terms and condition</label><br>
+               <div class="form-footer">
+                <button class="btn">Register Now</button>
+               </div>
+               <p>Already, have an account?<a href="#">Login Now</a></p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Creating a table to nsert the value of the form inside the table -->
+    <div>
+        <h1>Content of the form</h1>
+        <table>
+            <th>Name:</th>
+            <th>Passward:</th>
+            <th>Email:</th>
+            <tr>
+                <td>Nitish Rai</td>
+                <td>sfsdfasfddfs</td>
+                <td>fdfdssd</td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="form.js"></script>
+</body>
+</html>
