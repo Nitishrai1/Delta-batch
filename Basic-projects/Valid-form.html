@@ -69,17 +69,17 @@
                <input type="text" name="username" placeholder="Enter your name" id="username">
                <hr>
                <label for="username"><i class="fa-regular fa-envelope"></i></label> 
-               <input type="email" name="email" placeholder="Enter your email">
+               <input type="email" name="email" placeholder="Enter your email" id="email">
                <hr>
                <label for="username"><i class="fa-solid fa-lock"></i></label> 
-               <input type="password" name="password" placeholder="Enter your password"><i class="fa-regular fa-eye" id="eye-logo"></i>
+               <input type="password" name="password" placeholder="Enter your password" id="pass"><i class="fa-regular fa-eye" id="eye-logo"></i>
                <hr>
                <label for="username"><i class="fa-solid fa-lock"></i></label> 
                <input type="password" name="confirm-pass" placeholder="Confirm your passward">
                <hr>
                <input type="checkbox" id="check"> <label for="check">I accept all terms and condition</label><br>
                <div class="form-footer">
-                <button class="btn">Register Now</button>
+                <button class="btn" onclick="addrow()">Register Now</button>
                </div>
                <p>Already, have an account?<a href="#">Login Now</a></p>
 
@@ -91,15 +91,15 @@
     <!-- Creating a table to nsert the value of the form inside the table -->
     <div>
         <h1>Content of the form</h1>
-        <table>
-            <th>Name:</th>
-            <th>Passward:</th>
-            <th>Email:</th>
-            <tr>
-                <td>Nitish Rai</td>
-                <td>sfsdfasfddfs</td>
-                <td>fdfdssd</td>
-            </tr>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>User name</th>
+                    <th>Email</th>
+                    <th>passward</th>
+                </tr>
+            </thead>
+            
         </table>
     </div>
     
