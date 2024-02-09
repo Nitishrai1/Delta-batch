@@ -37,3 +37,11 @@ h1,h2{
 
 }
 
+.flash{
+    background-color: white;
+}
+
+.userflash{
+    background-color: green;
+}
+
