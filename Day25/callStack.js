@@ -14,3 +14,6 @@ function three(){
 }
 console.log("Calling funciton three");
 three();
+
+// breakpoints: it is used to create a break point between differnt function call to find the erro in the code it is present in the browser itself
+// Javascript is a single threaded one task is executed at a time 
