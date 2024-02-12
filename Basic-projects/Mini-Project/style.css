@@ -1,39 +1,28 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-h1,h2{
+body{
     text-align: center;
 }
-.main-container{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-
-}
-
-.main-container div{
+.btn{
     height: 200px;
     width: 200px;
-    margin: 10px 20px;
-    border-radius: 22px;
-    border: 8px solid black;
+    border-radius: 20%;
+    border: 12px solid black;
+    margin: 3rem;
 }
-.box1{
-    background-color: #f99b45;
-
+.btn-container{
+    display: flex;
+    justify-content: center;
 }
-.box2{
-    background-color: #d95980;
-    
+.yellow{
+    background-color:#f00b45;
 }
-.box3{
+.red{
+    background-color: #d95900;
+}
+.green{
+    background-color:#63aac0;
+}
+.purple{
     background-color: #819ff9;
-    
-}
-.box4{
-    background-color: #63aac0;
 
 }
 
@@ -44,4 +33,3 @@ h1,h2{
 .userflash{
     background-color: green;
 }
-

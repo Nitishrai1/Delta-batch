@@ -1,61 +1,82 @@
-let gameSeq=[];
-let userSeq=[];
-
-let started=false
+let gameseq=[];
+let userseq=[];
+let started=false;
 let level=0;
+
+// Accesing the h2
 let h2=document.querySelector("h2");
 
-let btns=["box1","box2","box3","box4"]
+let btns=["yellow","red","purple","green"];
 
 document.addEventListener("keypress",function(){
     if(started==false){
+        console.log(`Game started`);
         started=true;
-    // console.log("Game started");
-    levelup();
-
+        levelup();
     }
-
 });
 
 function levelup(){
     level++;
-    h2.innerText=`Level ${level}`;
+    h2.innerHTML=`Level ${level}`;
 
-    let index=Math.floor(Math.random()*3);
-    let randomcolor=btns[index];
+    let randomindex=Math.floor(Math.random()*3);
+    let randomcolor=btns[randomindex];
+
     let randbtn=document.querySelector(`.${randomcolor}`);
-    console.log(index);
-    console.log(randomcolor);
-    console.log(randbtn);
-    buttonFlash(randbtn);
+    gameseq.push(randomcolor);
+    console.log(gameseq);
+    gameflash(randbtn);
+
 
 }
-
-function buttonFlash(btn){
+function gameflash(btn){
     btn.classList.add("flash");
-    setTimeout(function(){
+    setTimeout(function() {
         btn.classList.remove("flash");
-    },250)
+        
+    }, 250);
 
 
 }
+
+// userflash function
 function userFlash(btn){
     btn.classList.add("userflash");
-    setTimeout(function(){
+    setTimeout(function() {
         btn.classList.remove("userflash");
-    },250)
+        
+    }, 250);
 
 
 }
 
+// button eventlistners
 function btnPress(){
     console.log(this);
-    let clickedbtn=this;
-    userFlash(clickedbtn);
+    let btn=this;
+    gameflash(btn);
+    userFlash(btn);
+    usercolor=btn.getAttribute("id");
+    console.log(usercolor);
+    userseq.push(usercolor);
+    checkAns();
+
 }
 
 let allbtns=document.querySelectorAll(".btn");
-
-for(btn of allbtnsbtns){
+for(btn of allbtns){
     btn.addEventListener("click",btnPress);
+}
+
+// matching sequence
+function checkAns(){
+    // console.log(`Current level ${level}`);
+    let index=level-1;
+    if(userseq[index]===gameseq[index]){
+        console.log("same value");
+    }
+    else{
+        h2.innerText=`Game over `
+    }
 }
