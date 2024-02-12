@@ -17,8 +17,9 @@ document.addEventListener("keypress",function(){
 });
 
 function levelup(){
+    userseq=[];
     level++;
-    h2.innerHTML=`Level ${level}`;
+    h2.innerText=`Level ${level}`;
 
     let randomindex=Math.floor(Math.random()*3);
     let randomcolor=btns[randomindex];
@@ -60,7 +61,7 @@ function btnPress(){
     usercolor=btn.getAttribute("id");
     console.log(usercolor);
     userseq.push(usercolor);
-    checkAns();
+    checkAns(userseq.length-1);
 
 }
 
@@ -70,13 +71,28 @@ for(btn of allbtns){
 }
 
 // matching sequence
-function checkAns(){
-    // console.log(`Current level ${level}`);
-    let index=level-1;
+function checkAns(index){
+    
     if(userseq[index]===gameseq[index]){
         console.log("same value");
+        if(userseq.length==gameseq.length){
+            setTimeout(levelup,1000);
+        }
     }
     else{
-        h2.innerText=`Game over `
+        h2.innerHTML=`Game over: your score was <b>${level}</b><br> Press any key to restart`;
+        document.querySelector("body").style.backgroundColor="red";
+        setTimeout(function(){
+        document.querySelector("body").style.backgroundColor="white";
+
+
+        },150);
+        reset();
     }
+}
+function reset(){
+    started=false;
+    gameseq=[];
+    userseq=[];
+    level=0;
 }
