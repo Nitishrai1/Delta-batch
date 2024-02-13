@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+
+
+    <script>
+        function savetoDb(data,success,failure){
+            let internetspeed=Math.floor(Math.random()*10)+1;
+            if(internetspeed>4){
+                success();
+
+            }
+            else {
+                console.log(`was not saved`);
+            }
+        }
+        savetoDb("Nitish rai ");
+    </script>
+    
+</body>
+</html>
