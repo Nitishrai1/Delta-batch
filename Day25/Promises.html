@@ -9,17 +9,42 @@
 
 
     <script>
-        function savetoDb(data,success,failure){
+        // function savetoDb(data,success,failure){
+        //     let internetspeed=Math.floor(Math.random()*10)+1;
+        //     if(internetspeed>4){
+        //         success();
+
+        //     }
+        //     else {
+        //         console.log(`was not saved`);
+        //         failure();
+        //     }
+        // }
+        // savetoDb("Nitish rai ",()=>{
+        //     console.log("your data was saved: ");
+        //     savetoDb("Rohan yadav",()=>{
+        //         console.log("success2: data saved"),()=>{console.log("data was not saved: Weak connection")}})
+        // },()=>{
+        //     console.log("Weak connecetion, data not saved");
+        // });
+
+
+        // in the above code the function are interdependent on each other which is called the asynchronus nature of js to avoid this interdependenceise we use promises
+        // Promis: it is a object which have to part resove for success and reject: which is for failure
+
+        function savetoDb(data){
+            return new Promise((success,failure)=>{
             let internetspeed=Math.floor(Math.random()*10)+1;
             if(internetspeed>4){
                 success();
+            }
+            else{
+                failure();
+            }
 
-            }
-            else {
-                console.log(`was not saved`);
-            }
+            });
         }
-        savetoDb("Nitish rai ");
+        // savetoDb("nitish rai");
     </script>
     
 </body>
