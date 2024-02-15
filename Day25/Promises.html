@@ -50,16 +50,38 @@
         // savetoDb("nitish rai");
         // then(): if the request is fullfiled then the then mathod can be used if not then the catach mathed can be used catch()
 
-        let request=savetoDb("nitish rai");    //req is the promis object
-        request.then(()=>{
-            console.log("Promise was resolved");
-            console.log(request);
+        // let request=savetoDb("nitish rai");    //req is the promis object
+        // request.then(()=>{
+        //     console.log("Promise was resolved");
+        //     console.log(request);
+        // })
+        // .catch(()=>{
+        //     console.log("Promis was rejected");
+        //     console.log(request);
+
+        // })
+
+
+        // Promis chaining it is a method used in place where the  one task is resolved then the another task is sent
+        savetoDb("apna college")
+        .them(()=>{
+            console.log("data1 saved, promise was resolved.");
+            // savetoDb("Hello world")   //sending another promise
+            // .then(()=>{
+            //     console.log("data2 saved");
+            // })
+            return savetoDb("hello world");
+        }) 
+        .then(()=>{
+            console.log("data2 saved");
+            return savetoDb("nitish rai");
+        })
+        .then(()=>{
+            console.log("data3 saved");
         })
         .catch(()=>{
-            console.log("Promis was rejected");
-            console.log(request);
-
-        })
+            console.log("promise was rejected");
+        });
     </script>
     
 </body>
