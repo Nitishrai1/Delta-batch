@@ -1,0 +1,89 @@
+<!-- Ii is the first project of javascript in which we will make a color cahnger documnet page on which there are several color div nd whenever we click on theat div the color of the background becomes that div color -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .maincontainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            height: 100px;
+            width: 100px;
+            border-radius: 2px;
+            border: 2px solid black;
+            margin: 10px 5px;
+        }
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        h1,h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Color Scheme Switcher</b></h1>
+    <div class="maincontainer">
+        <div class="button" id="grey"></div>
+        <div class="button" id="white"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="yellow"></div>
+    </div>
+   <h2><b>Try clicking on one of the colors above <br>to change the background color of this page</b></b></h2>
+
+   <script>
+    let bdy=document.querySelector("body");
+    // let color=[];
+    
+    const btn=document.querySelectorAll(".button");
+
+    // adding eventlisterner on every button
+
+    btn.forEach(function(button){
+        console.log(button);
+        button.addEventListener('click',function(e){
+            if(e.target.id=="grey"){
+                bdy.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id=="white"){
+                bdy.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id=="blue"){
+                bdy.style.backgroundColor=e.target.id;
+            }
+            if(e.target.id=="yellow"){
+                bdy.style.backgroundColor=e.target.id;
+            }
+            
+        });
+    });
+
+
+
+    
+   </script>
+
+    
+</body>
+</html>
