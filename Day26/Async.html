@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async function</title>
+</head>
+<body>
+    <h1>Hello my self Nitish Rai</h1>
+
+
+    <script>
+        // Aysnc function  there are two term async and await and the async function return a promise by default
+
+
+
+        async function greet(){  //this will return a promise whenever the promise is returned then it state is fullfiled
+
+            throw "Weak connection";   //this is used to throw the error
+            return "hello";
+        }
+        greet()
+        .then((result)=>{
+            console.log("Promise was fullfiled : ",result);
+        })
+        .catch((err)=>{
+            console.log("promise was rejected with err : ",err);
+        })
+
+        // can be written as this way also
+
+        // let demo = async()=>{
+        //     return 5;
+        // }
+
+
+        // await keyward: this is used to pausees the surrounding async function until the promise is settelld
+
+
+        function getnumber(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    let num=Math.floor(Math.random()*10)+1;
+                    console.log(num);
+                    resolve();
+                },1000);
+            });
+        }
+
+        // async function demo(){
+        //     await getnumber();   //await: is used to tell that when the one function is completed then only the other function will be called
+        //    await getnumber();
+        //    await getnumber();
+        //     await getnumber();
+        //    await getnumber();
+
+        // }
+
+
+
+        // using await funtion for the color changeer
+        h1=document.querySelector("h1");
+        function changecolor(color,delay){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                h1.style.color=color;
+                resolve("color changed");
+            },delay);
+
+            });
+            
+        }
+
+        async function demo(){
+            await changecolor("red",1000);
+            await changecolor("green",1000);
+            await changecolor("blue",1000);
+            await changecolor("yellow",1000);
+            await changecolor("orange",1000);
+
+            
+
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
