@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(61, 61, 183);
+        }
+        .main-container{
+            /* display: flex; */
+            background-color: white;
+            line-height: 40px;
+            justify-content: center;
+            height: 350px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 8px;
+            margin: auto;
+            margin-top: 200px;
+            padding: 10px;
+        }
+        button{
+            border-radius: 5px;
+            height: 30px;
+            width: 100px;
+            background-color: rgb(73, 73, 162);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <h1>Number guessing game</h1>
+
+        <p>Try and guess a random number between 1 and 100 You have 10 attempts to guess the right number</p>
+        <h1><b>Guess a number</b></h1>
+        <h3></h3>
+        <input type="number" placeholder="none" id="input">
+        <button type="submit">Submit guess</button>
+        <h4>Previous Guesses: <span id="previous-guess"></span></h4>
+        <h4>Guessess Remaining: <span class="remianing-guess"></span></h4>
+        <h5></h5>
+    </div>
+    <script>
+        let randomnumber=Math.floor(Math.random()*100+1);
+        let count=10;
+        let prev=[];
+        let start=true;
+
+        // Selecting the previous data and the result to update
+        let arr=document.querySelector("#previous-guess");
+        let chance=document.querySelector(".remianing-guess");
+        let result=document.querySelector("h3");
+        let hint=document.querySelector("h5");
+
+        // selecting button and adding eventListner
+        let btn=document.querySelector("button");
+        // btn.addEventListener('click',function(){
+        //     // Selcting the input from the user
+            
+        //     let inp=parseInt(document.querySelector("input").value);
+        //     if(inp===randomnumber){
+        //         result.innerHTML=`You win your guess ${inp} was the right number`;
+                
+        //         prev=[];
+        //         count=10;
+
+        //     }
+        //     else{
+        //         prev.push(inp);
+        //         arr.innerHTML=prev;
+        //         count--;
+        //         chance.innerHTML=`You have only ${count} left`;
+        //         if(inp<randomnumber){
+        //             hint.innerHTML=`You are to small from the number`;
+        //         }
+        //         else if(inp>randomnumber){
+        //             hint.innerHTML=`You are large from the number`
+        //         }
+        //     }
+
+            
+        //     ;
+        // })
+
+
+        // Now writing this with more effective way by using functions 
+
+
+        if(start){
+            btn.addEventListener('click',function(e){
+                e.defaultPrevented();
+                let inp=parseInt(document.querySelector("#input").value)
+                validateguess(inp);
+            })
+        }
+        
+
+        function validateguess(inp){
+            if(inp>100 || inp<0){
+                alert("please enter a valid number");
+            }else{
+                prev.push(inp);
+                if(count===0){
+                    displayguess(inp);
+                    displaymessage(`Game over. Random number was ${randomnumber}`);
+                    endgame();
+                }
+                else{
+                    displayguess(inp);
+                    checkguess(inp);
+
+                }
+
+            }
+
+        }
+        function checkguess(inp){
+            if(inp===randomnumber){
+                result.innerHTML=`You win your choice ${inp} was the right number`;
+            }
+            else if(inp>randomnumber){
+                hint.innerHTML="Your guess was high";
+            }
+            else{
+                hint.innerHTML="Your guess was low";
+            }
+            
+
+        }
+
+        function displayguess(inp){
+            inp.value=" ";
+            arr.innerHTML=prev;
+            cnt--;
+            chance.innerHTML=`You have onlye ${count} attempt left`;
+
+        }
+
+        function displaymessage(message){
+            hint.innerHTML=message;
+
+        }
+
+        function endgame(){
+            inp="";
+            start=false;
+            newgame();
+            
+
+        }
+
+        function newgame(){
+            prev=[];
+            count=10;
+
+        }
+
+        // function hint(inp){
+        //     if(inp>randomnumber){
+        //         hint.innerHTML="Your guess is to high";
+        //     }
+        //     else if(inp<randomnumber){
+        //         hint.innerHTML="Your guess is to low";
+        //     }
+        // }
+
+        
+
+    </script>
+    
+</body>
+</html>
