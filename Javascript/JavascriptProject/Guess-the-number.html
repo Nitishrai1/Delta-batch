@@ -48,7 +48,7 @@
         <h5></h5>
     </div>
     <script>
-        let randomnumber=Math.floor(Math.random()*100+1);
+        let randomnumber=Math.floor(Math.random()*100)+1;
         let count=10;
         let prev=[];
         let start=true;
@@ -95,8 +95,8 @@
 
         if(start){
             btn.addEventListener('click',function(e){
-                e.defaultPrevented();
-                let inp=parseInt(document.querySelector("#input").value)
+                // e.defaultPrevented();
+                let inp=parseInt(document.querySelector("input").value)
                 validateguess(inp);
             })
         }
