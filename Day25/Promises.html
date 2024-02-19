@@ -6,6 +6,7 @@
     <title>Promises</title>
 </head>
 <body>
+    <h1>Hello My name is nitish rai</h1>
 
 
     <script>
@@ -32,56 +33,149 @@
         // in the above code the function are interdependent on each other which is called the asynchronus nature of js to avoid this interdependenceise we use promises
         // Promis: it is a object which have to part resove for success and reject: which is for failure
 
-        function savetoDb(data){
-            return new Promise((resolve,reject)=>{
-            let internetspeed=Math.floor(Math.random()*10)+1;
-            if(internetspeed>4){
-                resolve();
-                console.log("data was saved ");
+        // function savetoDb(data){
+        //     return new Promise((resolve,reject)=>{
+        //     let internetspeed=Math.floor(Math.random()*10)+1;
+        //     if(internetspeed>4){
+        //         resolve("Suceess: data was saved");
+        //         console.log("data was saved ");
 
-            }
-            else{
-                reject();
-                console.log("Weak: connection");
-            }
+        //     }
+        //     else{
+        //         reject("failure: weak connection");
+        //         console.log("Weak: connection");
+        //     }
 
-            });
+        //     });
+        // }
+        // // savetoDb("nitish rai");
+        // // then(): if the request is fullfiled then the then mathod can be used if not then the catach mathed can be used catch()
+
+        // // let request=savetoDb("nitish rai");    //req is the promis object
+        // // request.then(()=>{
+        // //     console.log("Promise was resolved");
+        // //     console.log(request);
+        // // })
+        // // .catch(()=>{
+        // //     console.log("Promis was rejected");
+        // //     console.log(request);
+
+        // // })
+
+
+        // // Promis chaining it is a method used in place where the  one task is resolved then the another task is sent
+        // savetoDb("apna college")
+        //     .them((result)=>{   //result is the statement which i have passed in the savetodb function
+        //         console.log("data1 saved, promise was resolved.");
+        //         console.log("result of promise: ",result);
+        //         // savetoDb("Hello world")   //sending another promise
+        //         // .then(()=>{
+        //         //     console.log("data2 saved");
+        //         // })
+        //         return savetoDb("hello world");
+        //     }) 
+        //     .then((result)=>{
+        //         console.log("data2 saved");
+        //         console.log("result of promise: ",result);
+
+        //         return savetoDb("nitish rai");
+        //     })
+        //     .then((result)=>{
+        //         console.log("data3 saved");
+        //         console.log("result of promise: ",result);
+
+        //     })
+        //     .catch((error)=>{     //error was the message which i have passed in the savetodb function
+        //         console.log("promise was rejected");
+        //         console.log("error of promise: ",error);
+        //     });
+
+        // Clean code
+
+    function savetoDb(data) {
+        return new Promise((resolve, reject) => {
+        let internetspeed = Math.floor(Math.random() * 10) + 1;
+        if (internetspeed > 4) {
+            resolve("Success: data was saved");
+            console.log("Data was saved");
+        } else {
+            reject("Failure: weak connection");
+            console.log("Weak connection");
         }
-        // savetoDb("nitish rai");
-        // then(): if the request is fullfiled then the then mathod can be used if not then the catach mathed can be used catch()
+    });
+}
 
-        // let request=savetoDb("nitish rai");    //req is the promis object
-        // request.then(()=>{
-        //     console.log("Promise was resolved");
-        //     console.log(request);
-        // })
-        // .catch(()=>{
-        //     console.log("Promis was rejected");
-        //     console.log(request);
+savetoDb("apna college")
+    .then((result) => {
+        console.log("Data 1 saved, promise was resolved.");
+        console.log("Result of promise: ", result);
+        return savetoDb("hello world");
+    })
+    .then((result) => {
+        console.log("Data 2 saved");
+        console.log("Result of promise: ", result);
+        return savetoDb("nitish rai");
+    })
+    .then((result) => {
+        console.log("Data 3 saved");
+        console.log("Result of promise: ", result);
+    })
+    .catch((error) => {
+        console.log("Promise was rejected");
+        console.log("Error of promise: ", error);
+    });
 
-        // })
 
+        // Creating a promise fo the color callback hell to change the color of the page
 
-        // Promis chaining it is a method used in place where the  one task is resolved then the another task is sent
-        savetoDb("apna college")
-        .them(()=>{
-            console.log("data1 saved, promise was resolved.");
-            // savetoDb("Hello world")   //sending another promise
-            // .then(()=>{
-            //     console.log("data2 saved");
-            // })
-            return savetoDb("hello world");
-        }) 
+        h1=document.querySelector("h1");
+        function changecolor(color,delay){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                h1.style.color=color;
+                resolve("color changed");
+            },delay);
+
+            })
+            
+        }
+
+        // changecolor("red",1000,()=>{
+        //     changecolor("orange",1000,()=>{
+        //         changecolor("green",1000,()=>{
+        //             changecolor("yellow",1000)
+        //         });
+        //     });
+        // });
+
+        changecolor("red",1000)
         .then(()=>{
-            console.log("data2 saved");
-            return savetoDb("nitish rai");
+            console.log("red color was cahneged");
+            return changecolor("orange",1000);
         })
         .then(()=>{
-            console.log("data3 saved");
+            console.log("orange color was cahneged");
+            return changecolor("green",1000);
+            
         })
-        .catch(()=>{   
-            console.log("promise was rejected");
-        });
+        .then(()=>{
+            console.log("green color was cahneged");
+            return changecolor("yellow",1000);
+
+        })
+        .then(()=>{
+            console.log("yellow color was cahneged");
+
+        })
+        .catch(()=>{
+            console.log("color was not changed");
+        })
+
+        // Changing this callback to a promise
+
+
+
+
     </script>
     
 </body>
