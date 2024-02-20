@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- API (Application programming interface just like a waiter tyey take a request and give it to api which bring back the result from the user and giev it to the user  API give the data in the form of JSON generally) -->
+
+    <!-- JSON java script object notation it is a format of the data which is can be used in any lanaguege no matter what the programing language in past xml was used in plcae JSON file in jason the value id stored in the fomat of the key value pair in the form of string in JSON thier is no undefined data JSON validator is used to validata the JSON that the JSon is valid or not -->
+
+    <!-- HOW to acces JSON data: Whenever the JSON come it come in the format of string JSON.parse(data) it is used to parse the JSON data into the javascript object wheread JSON.stringfy(data) is used to convert the object data into the for of string-->
+
+    <script>
+
+        let json='{"fact":"Cats don\u2019t have sweat glands over their bodies like humans do. Instead, they sweat only through their paws.","length":107}'
+
+        let obj=JSON.parse(json);
+        console.log(obj);
+
+        let json2=JSON.stringify(obj);
+        console.log(json2);  //this will convert the object data into the format of the json
+
+        // Testing API request
+        // there ar two tool Hoppscoth and Postman which is used to test the API 
+        
+    </script>
+
+
+    
+</body>
+</html>

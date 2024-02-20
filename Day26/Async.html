@@ -72,16 +72,18 @@
         }
 
         async function demo(){
+           try{
             await changecolor("red",1000);
             await changecolor("green",1000);
             await changecolor("blue",1000);
             await changecolor("yellow",1000);
             await changecolor("orange",1000);
+           }catch{
+            console.log("Error caught!");
 
-            
-
-
+           }
         }
+        // Whenever the error occured the necxt await will be blocked hence to handel the error with the help of try and catch block
 
 
 
