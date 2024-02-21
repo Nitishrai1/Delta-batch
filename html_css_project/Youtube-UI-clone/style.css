@@ -4,6 +4,10 @@
     box-sizing: border-box;
     background-color: black;
 }
+body{
+    font-family:  "Roboto Mono", monospace;
+    font-weight: 500;
+}
 
 .main{
     display: flex;
@@ -23,39 +27,63 @@
 .left-side{
     display: flex;
     height: 56px;
-    width: 180px;
+    width: 200px;
     justify-content: center;
     align-items: center;
+    /* margin-left: 5px; */
 }
+/* .hamburgur{
+    height: 60px;
+    width: 60px;
+
+} */
 .left-side i{
     color: white;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     padding-left: 10px;
+    opacity: 0.5;
+    
     /* height: 50px; */
 }
 
 .left-side img{
     height: 30px;
-    width: 60;
+    width: 40px;
+}
+
+.youtube-logo sup{
+    opacity: 0.5;
+    padding-left: 2px;
+    font-size: 10px;
+
 }
 .youtube-logo{
     padding: 10px 10px 10px 20px;
     color: white;
     display: flex;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .hamburgur{
-    padding: 10px 10px 10px 5px;
-    left: 20px;
-    height: 40px;
-    width: 40px;
+    /* padding: 10px 10px 10px 5px; */
+    margin-right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    /* padding-bottom: 5px; */
+    padding-top: 10px;
+    padding-left: 0px;
     
 }
 
+
 .search-part{
     height: 40px;
-    width: 732px;
+    width: 600px;
     display: flex;
     margin-top: 5px;
 }
@@ -73,9 +101,64 @@
     border: 1px solid white;
     border-radius: 0px 20px 20px 0px;
     padding: 1px 6px;
+    text-align: center;
 }
 #search-logo{
     height: 24px;
     width: 24px;
     
+}
+.search-part button i{
+    font-size: 20px;
+    padding-top: 5px;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* microphone part */
+.mike{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.mike i{
+    color: white;
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+/* right side part */
+.profile-login{
+    width: 225px;
+    height: 40px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 5px;
+}
+
+.profile-login i{
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+.profile-login img{
+    margin-left: 50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Side bar css */
+.sidebar{
+    width: 240px;
+    /* height: 100vh; */
+    background-color: pink;
+    position: left;
 }
