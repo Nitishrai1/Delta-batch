@@ -49,6 +49,28 @@
 
         // HTTP header: we can also send the http header with the api url header can be used in different way and can extra data to the url that which type of data i want text type or json type etc.
 
+        // Creating the first API request
+        let url="https://catfact.ninja/fact";
+        //this funciton return a promise
+
+        fetch(url)
+            .then((res)=>{
+                console.log(res);
+                return res.json(); //this will also return a promise which give the data in readble data format
+            })
+            .then((data)=>{
+                console.log("data1 = ",data.fact);
+                return fetch(url);
+            })
+            .then((res)=>{
+                return res.json();
+            })
+            .then((data2)=>{
+                console.log("data2 = ",data2.fact);
+            })
+            .catch((err)=>{
+                console.log("ERROR - ",err);
+            })
 
         
     </script>
