@@ -9,9 +9,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <h2>Get Random Cat fact</h2>
-    <button>Get Fact</button>
+    <!-- <button>Get Fact</button> -->
     <p id="fact"></p>
     <img src="" alt="" id="image">
+
+
+    <!-- for query string -->
+    <input type="text" placeholder="enter country">
+    <button>Search</button>
+    <ul id="list"></ul>
+    <p id="result"></p>
     <script>
         // AXIOS mthood: it is a library  used to create the http request 
 
@@ -67,17 +74,55 @@
 
         // }
             // Axios: sending header with axios 
-            const url="https://icanhazdadjoke.com/";
-            async function getjokes(){
+            // const url="https://icanhazdadjoke.com/";
+            // async function getjokes(){
+            //     try{
+            //         const config={Headers:{Accept:"application/json"}};
+            //         let res=await axios.get(url.config);
+            //         console.log(res);
+            //     }
+            //     catch(err){
+            //         console.log("error occured: ",err);
+            //     }
+
+            // }
+
+
+            // Using Query string
+            let url="http://universities.hipolabs.com/search?name=";
+
+            let btn=document.querySelector("button")
+            btn.addEventListener("click",async()=>{
+                let country=document.querySelector("input").value;
+                console.log("Button was clicked");
+                let colarr=await getcolleges(country);
+                show(colarr);
+            });
+// 
+            // let country="india";
+            async function getcolleges(country){
                 try{
-                    const config={Headers:{Accept:"application/json"}};
-                    let res=await axios.get(url.config);
-                    console.log(res);
-                }
-                catch(err){
-                    console.log("error occured: ",err);
+                    let res=await axios.get(url+country);
+                    return res.data;
+                }catch(e){
+                    console.log("ERROR: ",e);
+                    return [];
                 }
 
+            }
+
+            function show(colarr){
+                let list=document.querySelector("#list");
+                list.innerText='';
+
+                for(col of colarr){
+                    let li=document.createElement("li");
+                    li.innerText=col.name;
+                    list.appendChild(li);
+                    
+
+
+                }
             }
 
             
