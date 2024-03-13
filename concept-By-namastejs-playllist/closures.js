@@ -12,6 +12,6 @@ function x(){
 var z=x();
 console.log(z);   //this will return the function with its closures which is retured above in the function
 
-z();  //this will print the value of a because the function y is stored in the z variable and hence the closures can be used ti use the local scope also
+z();  //this will print the value of a because the function y is stored in the z variable and hence the closures can be used to use the local scope also 
 
 
