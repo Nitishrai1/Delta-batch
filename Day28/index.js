@@ -10,3 +10,12 @@
 // 5: shell: A program running on terminal
 // Bash: a program running on terminal
 // 6: Z Shell: Another shell (defualt) 
+
+// basic command
+// 1: ls" this will list all the files in the current working directory
+// 2:pwd: it showes the present working directory (where am I)
+// 3:  clear: it is used to clear the screen
+
+// Navigation: to go inside a directory or outside any directory
+
+// cd: cd command id used to change the directory
