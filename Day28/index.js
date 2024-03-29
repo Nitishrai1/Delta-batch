@@ -19,3 +19,7 @@
 // Navigation: to go inside a directory or outside any directory
 
 // cd: cd command id used to change the directory
+
+// Paths
+// cd Desktop/Delta(relative path)
+// cd/users/nitish/Delta(absolute path)
