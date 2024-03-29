@@ -23,3 +23,19 @@
 // Paths
 // cd Desktop/Delta(relative path)
 // cd/users/nitish/Delta(absolute path)
+//  / = root directory
+//  ~ = home directory
+
+// how to make directory
+// mkdir = make directory
+
+// flags : flags are character that we pass with commands to modify their behaviour
+// maunal command
+// man ls - give info about ls command
+// man mkdir - give info about mkdir command
+// with flags 
+// ls -l  it shows the additional info of the ls like when the folder was made time etc
+// mkdir 
+
+// touch command
+
