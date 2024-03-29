@@ -3,3 +3,11 @@ it is fast and highly scalable
 
 Github - it is a website where we post the project it is just like a social media but here we post the projects also called as repository
 
+
+Using Git
+git config --global user.name "My name"
+git config --global user.email "your email"
+
+clone: whenever we want to dounload the repository to our local machine we use git clone "link" we have to write this inside the terminal of the vs code
+
+git status: this command is used to check the status of the code untracted file are first add then it come to unmodified stage then it is modefiferd and commited and then the git track the changes in that file  thier are four types of file untracted,unmodified , modified, staged
