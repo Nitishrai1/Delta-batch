@@ -37,5 +37,9 @@
 // ls -l  it shows the additional info of the ls like when the folder was made time etc
 // mkdir 
 
-// touch command
+// touch command it is used to create nedw file in the current working dirrectory
+// deleting files & folders
+// rm - removes files
+// rmdir - removes empty folders
+// rm -rf -removes any folders
 
