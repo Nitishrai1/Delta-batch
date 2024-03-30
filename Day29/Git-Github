@@ -30,3 +30,18 @@ git branch -d branch name : to delete the branch
 pull request : it ltes you tell others abut changes you have pulled to the main to merge 
 
 clone - > new branch - > new file - > update - > pull request - > merge the request
+
+after merging we have to pull the changed made by the other developer by
+git pull origin main: used to fretch and dounload the remote repository to the local system
+
+Merge conflicts: whenever we made any changes in the same file by one or other developer then we have to merge the conflict manually 
+
+how to unadd the changes
+command->
+git reset file name or git reset -> just previous file reset
+
+how to uncommit 
+git commit -am "commit mistake"
+or git reset HEAD~1 uncommit the last commit
+
+fork: it is used to fork the repo made by other developer and contribute to the open source the same repo is copied to your github account
