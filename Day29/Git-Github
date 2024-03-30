@@ -11,3 +11,10 @@ git config --global user.email "your email"
 clone: whenever we want to dounload the repository to our local machine we use git clone "link" we have to write this inside the terminal of the vs code
 
 git status: this command is used to check the status of the code untracted file are first add then it come to unmodified stage then it is modefiferd and commited and then the git track the changes in that file  thier are four types of file untracted,unmodified , modified, staged
+
+whenever we add some untracted file to go to staged state and wehn we commit it again become untraced
+
+push: push command is used to push the commited file
+
+git init: it it used to create a new repo for the local folder and push to github
+git remote add orgin "link" : this command is used to set a remote area for pushing our code
