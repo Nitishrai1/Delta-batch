@@ -18,3 +18,15 @@ push: push command is used to push the commited file
 
 git init: it it used to create a new repo for the local folder and push to github
 git remote add orgin "link" : this command is used to set a remote area for pushing our code
+
+Branches: When thier is 2 or more developer working on the same project then all the developers make thier thier seperate brancehs to work on differnet part like frontend backend and database and at the end they merge thier brancehs with the main branch
+commands->
+git branch: to check the branch
+git branch -M main: to rename the branch name to main
+git checkout branch name to navigate
+git checkout -b new branch name : to create a new branch
+git branch -d branch name : to delete the branch
+
+pull request : it ltes you tell others abut changes you have pulled to the main to merge 
+
+clone - > new branch - > new file - > update - > pull request - > merge the request
