@@ -45,3 +45,9 @@ git commit -am "commit mistake"
 or git reset HEAD~1 uncommit the last commit
 
 fork: it is used to fork the repo made by other developer and contribute to the open source the same repo is copied to your github account
+commands other developer have to run for pushing
+git add .
+git commit -m "Description of changes"
+git fetch origin
+git rebase origin/main
+git push origin <branch_name>
