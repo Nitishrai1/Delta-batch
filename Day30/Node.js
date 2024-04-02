@@ -5,4 +5,4 @@
 // Process.argv: returns an array containing the command line argument passed when the Node.js process was launched 
 
 // modules .export
-import
+const val=require("./math");
