@@ -1,2 +1,4 @@
 # Ignore package.json file
 package.json
+node_modules
+package-lock.json
