@@ -20,3 +20,9 @@ app.get("/",(req,res)=>{
 
 // interpolation syntax
 // interpolation refers to embedding expressions into marked up text
+
+
+// passing datao to ejs 
+app.get("/rolldice",(req,res)=>{
+    
+})
