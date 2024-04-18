@@ -17,3 +17,6 @@ app.get("/",(req,res)=>{
     // res.send("this is home");
     res.render("home");
 })
+
+// interpolation syntax
+// interpolation refers to embedding expressions into marked up text
