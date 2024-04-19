@@ -53,7 +53,7 @@ app.get("/ig/:username",(req,res)=>{
 //    console.log(instaData);
     const data=instaData[username];
     console.log(data);
-   res.render("instagram.ejs",{data: instaData[username]});
+   res.render("instagram.ejs",{data});
 })
  
  
