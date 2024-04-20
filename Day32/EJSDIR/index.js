@@ -56,4 +56,10 @@ app.get("/ig/:username",(req,res)=>{
    res.render("instagram.ejs",{data});
 })
  
+
+
+// serving static files
+// app.use(express.static(folder_name)) : this method is used to send the static files like css file js file to to it with htm htm file and templates
+
+app.use(express.static(path.join(__dirname,"public")));
  
