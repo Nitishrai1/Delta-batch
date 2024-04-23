@@ -7,3 +7,9 @@
 // PUT: updates existing data
 // PATCH: update existing data partially
 // DELETE: removes data
+
+// GET /posts to get data for all posts
+// POST /posts to add a new post
+// GET /posts/:id to get one post (using id)
+// PATCH ,PUT /posts/:id to update specific post
+// DELETE /posts/:id to delete specific post
