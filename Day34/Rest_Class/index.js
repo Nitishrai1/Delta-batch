@@ -12,13 +12,17 @@ app.use(express.static(path.join(__dirname,"public")));
 
 let posts=[
     {
+        id:"1e",
         username:"nitishrai",
         content:"i love coding"
     },
     {
+        id:"1t",
         username:"mihir",
         content:"i love coding"
-    },{
+    },
+    {
+        id:"1o",
         username:"rohan",
         content:"i love coding"
     }, 
@@ -35,8 +39,17 @@ app.get("/posts/new",(req,res)=>{
 app.post("/posts",(req,res)=>{
     let {username,content}=req.body;
     posts.push({username,content});
-    res.send("post request working");
-})
+    // res.send("post request working");  //we can use res.redirect() to redirecct to some other document
+    res.redirect("/posts");
+});
+// Setting the route to get the information of the specific id
+app.get("/posts/:id",(req,res)=>{   //view route or index route
+    let {id}=req.params;
+    let post=posts.find((p)=>id===p.id);
+    res.render("show.ejs",{post});
+    res.send("Request working");
+});
+
 app.listen(port,()=>{
     console.log(`App listining on the port ${port}`);
 });
