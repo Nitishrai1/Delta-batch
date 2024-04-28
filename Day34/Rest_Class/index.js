@@ -2,8 +2,8 @@ const express=require("express");
 const app=express();
 const port=8081;
 const path=require("path");
-const {v4,uuidv4}=require("uuid");
-uuidv4();
+const {v4:uuidv4}=require("uuid");
+
 
 
 
@@ -57,6 +57,14 @@ app.get("/posts/:id",(req,res)=>{   //view route or index route
     res.render("show.ejs",{post});
     res.send("Request working");
 });
+
+// Patch: it is used to update a specific post or update the route
+app.patch("/posts/:id",(req,res)=>{
+    let {id}=req.params;
+    console.log(id);
+    res.send("patch working ");
+})
+
 
 app.listen(port,()=>{
     console.log(`App listining on the port ${port}`);
