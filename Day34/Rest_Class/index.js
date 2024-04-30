@@ -61,8 +61,18 @@ app.get("/posts/:id",(req,res)=>{   //view route or index route
 // Patch: it is used to update a specific post or update the route
 app.patch("/posts/:id",(req,res)=>{
     let {id}=req.params;
-    console.log(id);
+    let newcontent=req.body.content;
+    let post=posts.find((p)=>id===p.id);
+    post.content=newcontent;
+    console.log(post);
     res.send("patch working ");
+})
+app.get("/posts/:id/edit",(req,res)=>{
+    let {id}=res.params;
+    let post=posts.find((p)=>id===p.id);
+
+    res.render("edit.ejs",{post});
+
 })
 
 
