@@ -73,7 +73,7 @@ app.get("/posts/:id/edit",(req,res)=>{
 
     res.render("edit.ejs",{post});
 
-})
+});
 
 
 app.listen(port,()=>{
