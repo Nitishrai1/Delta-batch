@@ -3,11 +3,13 @@ const app=express();
 const port=8081;
 const path=require("path");
 const {v4:uuidv4}=require("uuid");
+const methodoverride=require("method-override");
 
 
 
 
 
+app.use(methodoverride('_method'));
 app.use(express.urlencoded({extended:true}));
 
 app.set("view engine","ejs");
@@ -65,7 +67,7 @@ app.patch("/posts/:id",(req,res)=>{
     let post=posts.find((p)=>id===p.id);
     post.content=newcontent;
     console.log(post);
-    res.send("patch working ");
+    res.redirect("/posts");
 })
 app.get("/posts/:id/edit",(req,res)=>{
     let {id}=res.params;
@@ -74,6 +76,8 @@ app.get("/posts/:id/edit",(req,res)=>{
     res.render("edit.ejs",{post});
 
 });
+// html forms can only send a get and post method not any other to overcome with this we use method overriding
+
 
 
 app.listen(port,()=>{
