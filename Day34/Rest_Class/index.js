@@ -79,7 +79,11 @@ app.get("/posts/:id/edit",(req,res)=>{
 // html forms can only send a get and post method not any other to overcome with this we use method overriding
 
 
-
+app.delete("/posts/:id",(req,res)=>{
+    let {id}=req.params;
+    posts=posts.filter((p)=>id!==p.id);
+    res.redirect("/posts");
+});
 app.listen(port,()=>{
     console.log(`App listining on the port ${port}`);
 });
