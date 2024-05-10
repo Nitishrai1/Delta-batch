@@ -1,6 +1,7 @@
 // const mongoose=require("mongoose")
 // mongoose.connect('mongodb://localhost:27017/Delta-Batch')
 
+const { kMaxLength } = require('buffer');
 const mongoose = require('mongoose');
 
 main().then(()=>{console.log("Connection Successfull");})
@@ -60,7 +61,8 @@ User.deleteOne({name:"Nitish"}).then((res)=>console.log(res)).catch((err)=>conso
 const bookSchema=mongoose.Schema({
   title:{
     type:String,
-    required:true
+    required:true,
+    MaxLength:20
   },
   author:{
     type:String,
