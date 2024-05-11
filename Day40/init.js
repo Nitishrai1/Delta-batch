@@ -11,25 +11,25 @@ let allchats=[
     {
         from:"nitish",
         to:"preeti",
-        message:"send the notes for the test",
+        mgg:"send the notes for the test",
         created_at:new Date(),
     },
     {
         from:"rohit",
         to:"neha",
-        message:"send the notes for the test",
+        mgg:"send the notes for the test",
         created_at:new Date(),
     },
     {
         from:"mohan",
         to:"roshni",
-        message:"send the notes for the test",
+        mgg:"send the notes for the test",
         created_at:new Date(),
     },
     {
         from:"mihir",
         to:"anvi",
-        message:"send the notes for the test",
+        mgg:"send the notes for the test",
         created_at:new Date(),
     },
 ]

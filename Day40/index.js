@@ -23,6 +23,17 @@ let chat1=new chat({
 chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
 
 
+
+// Index Route
+app.get("/chats", async (req,res)=>{
+   let chats = await chat.find();
+   console.log(chats);
+   res.render("index.ejs",{chats});
+})
+
+
+
+
 app.get("/",(req,res)=>{
     res.send("App working");
 })
