@@ -5,6 +5,8 @@ const chat=require("./models/chat.js")
 
 const path=require("path");
 
+app.use(express.static(path.join(__dirname,"public")))
+
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 
@@ -28,7 +30,7 @@ chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
 app.get("/chats", async (req,res)=>{
    let chats = await chat.find();
    console.log(chats);
-   res.render("index.ejs",{chats});
+    res.render("index.ejs",{chats});
 })
 
 

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All chats</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h3>All chats</h3>
-    <%=for(let chat of chats){%>
+    <%for(let chat of chats){%>
         <div class="chat">
             <p>From: <%=chat.from%></p>
             <div class="msg">
@@ -15,7 +16,7 @@
             </div>
             <p>Received by: <%=chat.to%></p>
         </div>
-    <%=}%>
+    <%}%> 
 
 
     
