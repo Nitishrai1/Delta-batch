@@ -34,6 +34,11 @@ app.get("/chats", async (req,res)=>{
 })
 
 
+// new chat
+app.get("/chats/new",(req,res)=>{
+    res.render("form.ejs");
+})
+
 
 
 app.get("/",(req,res)=>{
