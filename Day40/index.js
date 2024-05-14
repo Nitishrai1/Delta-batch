@@ -40,7 +40,7 @@ app.get("/chats/new",(req,res)=>{
 })
 
 
-
+// its a get api for home page
 app.get("/",(req,res)=>{
     res.send("App working");
 })
