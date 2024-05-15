@@ -45,6 +45,8 @@ app.get("/",(req,res)=>{
     res.send("App working");
 })
 
+
+// createing a port for the host to list
 app.listen(8081,()=>{
     console.log(`Port connected at port ${8081}`)
 })
