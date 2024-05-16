@@ -2,7 +2,7 @@
 // mongoose.connect('mongodb://localhost:27017/Delta-Batch')
 
 const { kMaxLength } = require('buffer');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');  //this is used to require mongoose which helpp to connect with mongodb
 
 main().then(()=>{console.log("Connection Successfull");})
 .catch((err)=>{console.log(err)})
