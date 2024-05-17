@@ -56,7 +56,7 @@ app.post("/chats",(req,res)=>{
 
     })
     .catch((err)=>{console.log(err)});    
-    res.send("working");    
+    res.redirect("/chats"); 
 })
 
 
