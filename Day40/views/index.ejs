@@ -18,11 +18,11 @@
                 <p><%=chat.msg%></p>
                 <form method="GET" action="/chats/<%= chat._id %>/edit">
                     <button>Edit</button>
-                </form>
+                </form>  
             </div>
             <p>Received by: <%=chat.to%></p>
             <hr/>
-            <p><%=chat.create_at.toString().split(" ")[4] %></p>  
+            <p><%=chat.create_at.toString().split(" ")[4] %></p>   
             <p><%=chat.create_at.toString().split(" ").slice(0,4).join("-")%></p>  
 
         </div>
