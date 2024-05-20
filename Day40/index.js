@@ -30,13 +30,14 @@ chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
 // Index Route
 app.get("/chats", async (req,res)=>{
    let chats = await chat.find();
-   console.log(chats);
+   
     res.render("index.ejs",{chats});
 })
 
 
-// new chat
+// new route
 app.get("/chats/new",(req,res)=>{
+
     res.render("new.ejs");
 })
 
@@ -47,7 +48,7 @@ app.post("/chats",(req,res)=>{
         from:from,
         to:to,
         msg:msg,
-        create_at:new Date()
+        created_at:new Date()
 
     });
     newChat
