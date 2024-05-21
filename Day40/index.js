@@ -66,6 +66,15 @@ app.get("/",(req,res)=>{
     res.send("App working");
 })
 
+// this is edit route
+app.get("/chats/:id/edit",async(req,res)=>{
+    let {id}=req.params;
+    let Chat=await chat.findById(id);
+
+
+
+    res.render("edit.ejs",{Chat});
+})
 
 // createing a port for the host to list
 app.listen(8081,()=>{
