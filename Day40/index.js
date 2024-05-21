@@ -2,12 +2,12 @@ const express=require("express");
 const app=express();
 const mongoose=require("mongoose");
 const chat=require("./models/chat.js")
-
+const methodoverride=require("/method-override")
 const path=require("path");
 
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.urlencoded({extended:true}))
-
+app.use(methodoverride("_method"));
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 
@@ -74,6 +74,16 @@ app.get("/chats/:id/edit",async(req,res)=>{
 
 
     res.render("edit.ejs",{Chat});
+})
+
+// this is the update route
+app.put("/chats/:id",async(req,res)=>{
+    let {id}=req.params;
+    let {newmsg}=req.body;
+    let updatedchat=await chat.findByIdAndUpdate(id,{msg:newmsg},{runValidators:true,new:true});
+    console.log(updatedchat);
+    res.redirect("/chats")
+
 })
 
 // createing a port for the host to list
