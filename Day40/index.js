@@ -7,7 +7,7 @@ const path=require("path");
 
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.urlencoded({extended:true}))
-app.use(methodoverride("_method"));
+app.use(methodoverride("_method"));  //this is used to use the method 0verruide for the put api
 app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 
