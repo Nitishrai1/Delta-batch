@@ -27,7 +27,7 @@ chat1.save().then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
 
 
 
-// Index Route
+// Index Route   
 app.get("/chats", async (req,res)=>{
    let chats = await chat.find();
    
