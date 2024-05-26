@@ -16,6 +16,8 @@ async function main(){
     await mongoose.connect('mongodb://localhost:27017/Chat-app');
 } 
 
+
+// this is schema for the data base
 let chat1=new chat({
     from:"neha",
     to:"niiths",
