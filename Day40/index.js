@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const mongoose=require("mongoose");
 const chat=require("./models/chat.js")
-const methodoverride=require("/method-override")
+const methodoverride=require("method-override")
 const path=require("path");
 
 app.use(express.static(path.join(__dirname,"public")))
@@ -82,6 +82,7 @@ app.get("/chats/:id/edit",async(req,res)=>{
 app.put("/chats/:id",async(req,res)=>{
     let {id}=req.params;
     let {newmsg}=req.body;
+    console.log(newmsg);
     let updatedchat=await chat.findByIdAndUpdate(id,{msg:newmsg},{runValidators:true,new:true});
     console.log(updatedchat);
     res.redirect("/chats")
