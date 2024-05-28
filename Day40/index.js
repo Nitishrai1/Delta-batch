@@ -89,6 +89,14 @@ app.put("/chats/:id",async(req,res)=>{
 
 })
 
+// delete route
+app.delete("/chats/:id",async(req,res)=>{
+    let {id}=req.params;
+    let deleted_chat=await chat.findByIdAndDelete(id);
+    console.log(`chat deleted = ${deleted_chat}`);
+    res.redirect("/chats");
+})
+
 // createing a port for the host to list
 app.listen(8081,()=>{
     console.log(`Port connected at port ${8081}`)
