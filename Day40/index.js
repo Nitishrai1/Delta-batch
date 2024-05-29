@@ -1,4 +1,4 @@
-const express=require("express");
+const express=require("express"); //this is to require the express package
 const app=express();
 const mongoose=require("mongoose");
 const chat=require("./models/chat.js")
