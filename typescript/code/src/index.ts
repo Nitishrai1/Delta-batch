@@ -25,3 +25,8 @@ console.log(newnumbers)
 // tuple are used to represent the key value pair in the typescript
 
 let user: [number,string]=[1,'Mosh'];
+
+// enum : it represnt the list of related constants 
+enum Size{Small=1,Medium,Large}; //in this when we set the small 1 then the other will be 2 and 3 if not declared then it start with 0
+let mysize=Size.Medium
+console.log(mysize)
